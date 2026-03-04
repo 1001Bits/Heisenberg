@@ -99,9 +99,9 @@ api->DisableHand(true);                                   // disable left hand g
 | `IsInMouthZone(isLeft)` | `bool` | Hand near mouth (consume area) |
 | `IsInVHZone(isLeft)` | `bool` | Hand in a [Virtual Holsters](https://www.nexusmods.com/fallout4/mods/88386) zone |
 | `GetCurrentZoneName(isLeft)` | `const char*` | Zone name or empty string |
-| `GetVHZoneIndex(isLeft)` | `int` | [Virtual Holsters](https://www.nexusmods.com/fallout4/mods/88386) zone: 0=None, 1-7=zone |
+| `GetVHZoneIndex(isLeft)` | `int` | VH zone: 0=None, 1-7=zone |
 
-> **Note:** VH (Virtual Holsters) is a separate mod that adds body-mounted weapon holster zones. These functions require Virtual Holsters to be installed — they return false/0 if it is not present.
+> These functions require Virtual Holsters to be installed — they return false/0 if it is not present.
 
 #### Inventory
 
