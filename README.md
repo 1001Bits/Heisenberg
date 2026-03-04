@@ -97,9 +97,11 @@ api->DisableHand(true);                                   // disable left hand g
 | `IsInStorageZone(isLeft)` | `bool` | Hand behind head (storage area) |
 | `IsInEquipZone(isLeft)` | `bool` | Hand at head/chest (equip area) |
 | `IsInMouthZone(isLeft)` | `bool` | Hand near mouth (consume area) |
-| `IsInVHZone(isLeft)` | `bool` | Hand in VirtualHolsters zone |
+| `IsInVHZone(isLeft)` | `bool` | Hand in a [Virtual Holsters](https://www.nexusmods.com/fallout4/mods/88386) zone |
 | `GetCurrentZoneName(isLeft)` | `const char*` | Zone name or empty string |
-| `GetVHZoneIndex(isLeft)` | `int` | VH zone: 0=None, 1-7=zone |
+| `GetVHZoneIndex(isLeft)` | `int` | [Virtual Holsters](https://www.nexusmods.com/fallout4/mods/88386) zone: 0=None, 1-7=zone |
+
+> **Note:** VH (Virtual Holsters) is a separate mod that adds body-mounted weapon holster zones. These functions require Virtual Holsters to be installed — they return false/0 if it is not present.
 
 #### Inventory
 
@@ -120,7 +122,9 @@ api->DisableHand(true);                                   // disable left hand g
 | `GetGrabTransform(isLeft)` | Get hand-to-object offset |
 | `SetGrabTransform(isLeft, transform)` | Change how object is held |
 
-#### Hand Collision
+#### Hand Collision (Work in Progress)
+
+> **Note:** Hand collision is not yet active in the current release. These functions are reserved for a future update and will return false/nullptr until then.
 
 | Method | Returns | Description |
 |--------|---------|-------------|
