@@ -1,0 +1,543 @@
+{
+  "modName": "Heisenberg",
+  "displayName": "Heisenberg VR",
+  "minMcmVersion": 1,
+  "content": [
+    {
+      "text": "Object Handling",
+      "type": "section"
+    },
+    {
+      "id": "bEnablePalmSnap:ObjectPickup",
+      "text": "Object Pull",
+      "type": "switcher",
+      "help": "Enable to pull objects displayed on your wands to your hands when you press Grip.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bEnableNaturalGrab:ObjectPickup",
+      "text": "Telekinesis",
+      "type": "switcher",
+      "help": "When enabled, objects within telekinesis range will start moving with your hand when grip is pressed.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "fNaturalGrabDistance:ObjectPickup",
+      "text": "Telekinesis Range",
+      "type": "slider",
+      "help": "Maximum distance for telekinesis. If pull to hand is enabled, objects within this range will not be pulled in.",
+      "valueOptions": {
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "bEnableStickyGrab:ObjectPickup",
+      "text": "Sticky Objects",
+      "type": "switcher",
+      "help": "When enabled, press grip once to pick up and again to release. When disabled, you must hold grip to keep holding objects.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bAllowGrabbingOwnedItems:ObjectPickup",
+      "text": "Allow Picking Up Owned Items",
+      "type": "switcher",
+      "help": "Allow picking up items that are marked as owned (stealing).",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "fThrowVelocityBoostFactor:ObjectPickup",
+      "text": "Throwing Speed",
+      "type": "slider",
+      "help": "Multiplier for throw velocity. Higher values make objects fly faster when thrown. Default: 1.0.",
+      "valueOptions": {
+        "min": 0.5,
+        "max": 5.0,
+        "step": 0.1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "bEnableItemPositioning:ItemPositioning",
+      "text": "Item Positioning Mode",
+      "type": "switcher",
+      "help": "Long press left thumbstick while holding an item to enter positioning mode. Adjust how items are held in your hand.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Equipping",
+      "type": "section"
+    },
+    {
+      "id": "iWeaponEquipMode:ObjectPickup",
+      "text": "Enable Weapon Equipping",
+      "type": "stepper",
+      "help": "Equip weapons by dropping them on your weapon hand.",
+      "valueOptions": {
+        "options": ["Disabled", "Drop on Weapon Hand", "Auto Equip"],
+        "sourceType": "ModSettingInt"
+      }
+    },
+    {
+      "id": "iArmorEquipZone:Equipping",
+      "text": "Enable Armor Equipping",
+      "type": "stepper",
+      "help": "Drop armor/clothing on chest or head area to equip.",
+      "valueOptions": {
+        "options": ["Disabled", "Enabled"],
+        "sourceType": "ModSettingInt"
+      }
+    },
+    {
+      "id": "bEnableVHHolstering:ObjectPickup",
+      "text": "Enable VH Holstering",
+      "type": "switcher",
+      "help": "Drop a held weapon on a Virtual Holsters zone to holster it. Requires Virtual Holsters mod.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Storing",
+      "type": "section"
+    },
+    {
+      "id": "bEnableItemStorageZones:ItemStorage",
+      "text": "Enable Item Storage",
+      "type": "switcher",
+      "help": "Enable the behind-head zone for quick item storage.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bEnableAutoStorage:ItemStorage",
+      "text": "Enable Auto Storage",
+      "type": "switcher",
+      "help": "Automatically store items after holding them in the storage zone for the set duration.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "fStorageZoneHoldTime:ItemStorage",
+      "text": "Auto-Storage Time",
+      "type": "slider",
+      "help": "How long you need to hold held objects in storage zone before they are auto stored.",
+      "valueOptions": {
+        "min": 0.0,
+        "max": 2.0,
+        "step": 0.1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "fItemStorageZoneRadius:ItemStorage",
+      "text": "Storage Zone Radius",
+      "type": "slider",
+      "help": "Radius of storage zone in cm. Default: 19.",
+      "valueOptions": {
+        "min": 5,
+        "max": 40,
+        "step": 1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "bEnableDropToCompanion:ItemStorage",
+      "text": "Drop To Companion",
+      "type": "switcher",
+      "help": "Drop an item near a companion to give it to them.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Dropping and Looting",
+      "type": "section"
+    },
+    {
+      "id": "bEnableDropToHand:DropToHand",
+      "text": "Enable Drop To Hand",
+      "type": "switcher",
+      "help": "Items dropped from inventory spawn in your hand instead of falling.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "iLootToHandMode:DropToHand",
+      "text": "Loot To Hand Mode",
+      "type": "stepper",
+      "help": "How looted items are handled. Off = inventory. Hybrid = object goes to free hand or inventory. Immersive = looted items go to hand or floor.",
+      "valueOptions": {
+        "options": ["Off", "Hybrid", "Immersive"],
+        "sourceType": "ModSettingInt"
+      }
+    },
+    {
+      "id": "iDropToHandPreferredHand:DropToHand",
+      "text": "Preferred Hand",
+      "type": "stepper",
+      "help": "Which hand receives dropped items.",
+      "valueOptions": {
+        "options": ["Left Hand", "Right Hand", "Free Hand"],
+        "sourceType": "ModSettingInt"
+      }
+    },
+    {
+      "id": "bEnablePickpocket:Pickpocket",
+      "text": "Enable Direct Pickpocketing",
+      "type": "switcher",
+      "help": "Allows direct pickpocketing of people when sneaking near them and pressing grip.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bEnableHarvestToHand:DropToHand",
+      "text": "Enable Harvest To Hand",
+      "type": "switcher",
+      "help": "Harvested flora items appear in your hand instead of going to inventory.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Consuming",
+      "type": "section"
+    },
+    {
+      "id": "bConsumableToHand:Consumables",
+      "text": "Enable Consuming",
+      "type": "switcher",
+      "help": "Consumables used from Pipboy appear in hand instead of being consumed immediately. Bring to mouth to consume.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "fMouthRadius:Consumables",
+      "text": "Mouth Zone Radius",
+      "type": "slider",
+      "help": "Radius of the mouth zone for consuming items in cm. Default: 11.",
+      "valueOptions": {
+        "min": 5,
+        "max": 25,
+        "step": 1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "fMouthVelocityThreshold:Consumables",
+      "text": "Max Consume Velocity",
+      "type": "slider",
+      "help": "Max hand speed (m/s) to consume items. Prevents accidental consumes. Default: 2.0.",
+      "valueOptions": {
+        "min": 0.5,
+        "max": 5.0,
+        "step": 0.1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "bEnableHandInjection:Consumables",
+      "text": "Enable Hand Injection",
+      "type": "switcher",
+      "help": "Consume syringes and chems by bringing them to your opposite hand. Uses same zone layout as Virtual Chems.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "fHandInjectionRadius:Consumables",
+      "text": "Hand Injection Zone Radius",
+      "type": "slider",
+      "help": "Radius of the hand injection zone in cm. Default: 8.",
+      "valueOptions": {
+        "min": 3,
+        "max": 20,
+        "step": 1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Cooking",
+      "type": "section"
+    },
+    {
+      "id": "bEnableCooking:Cooking",
+      "text": "Enable Cooking",
+      "type": "switcher",
+      "help": "Cook raw food by holding it near a fire or cooking station.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "fCookTime:Cooking",
+      "text": "Cook Time",
+      "type": "slider",
+      "help": "Seconds near fire to cook an item. Default: 2.",
+      "valueOptions": {
+        "min": 0.0,
+        "max": 2.0,
+        "step": 0.1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "bCookingStationOnly:Cooking",
+      "text": "Only Allow Cooking at Cooking Stations",
+      "type": "switcher",
+      "help": "Enable to only allow cooking at cooking stations. When off, cooking is possible near any heat source.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Throwables / Grenades",
+      "type": "section"
+    },
+    {
+      "id": "iThrowableActivationZone:Throwables",
+      "text": "Throwable Activation Zone",
+      "type": "stepper",
+      "help": "Disabled = grenades work everywhere. Enabled = grenades only work in chest zone.",
+      "valueOptions": {
+        "options": ["Disabled", "Enabled"],
+        "sourceType": "ModSettingInt"
+      }
+    },
+    {
+      "id": "fThrowableZoneRadius:Throwables",
+      "text": "Throwable Zone Radius",
+      "type": "slider",
+      "help": "Radius of the throwable activation zone in cm. Default: 21.",
+      "valueOptions": {
+        "min": 5,
+        "max": 50,
+        "step": 1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Smart Retrieval",
+      "type": "section"
+    },
+    {
+      "id": "bEnableSmartGrab:SmartGrab",
+      "text": "Enable Smart Retrieval",
+      "type": "switcher",
+      "help": "Reach behind your head with grip to pull a context-appropriate item from inventory.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "fHealthThreshold:SmartGrab",
+      "text": "Health Threshold",
+      "type": "slider",
+      "help": "Pull a stimpak when health is below this percentage. Default: 30%.",
+      "valueOptions": {
+        "min": 0.0,
+        "max": 1.0,
+        "step": 0.05,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "fRadsThreshold:SmartGrab",
+      "text": "Rads Threshold",
+      "type": "slider",
+      "help": "Pull RadAway when radiation is above this percentage. Default: 25%.",
+      "valueOptions": {
+        "min": 0.0,
+        "max": 1.0,
+        "step": 0.05,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "bIncludeHeavyJunk:SmartGrab",
+      "text": "Include Heavy Junk and Low Damage Weapons",
+      "type": "switcher",
+      "help": "When no priority item is found, retrieve junk and weapons to drop to companion.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Pipboy Interaction",
+      "type": "section"
+    },
+    {
+      "id": "bForceTerminalOnWrist:Pipboy",
+      "text": "Allow Pipboy Hacking",
+      "type": "switcher",
+      "help": "Allows you to hack terminals on your Pipboy. When enabled, terminals display on your wrist Pipboy. Requires wrist Pipboy mode.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Water Interaction",
+      "type": "section"
+    },
+    {
+      "id": "bEnableWaterInteraction:Water",
+      "text": "Enable Water Interaction",
+      "type": "switcher",
+      "help": "Enable water splash and ripple effects when hands touch water.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "fSplashScale:Water",
+      "text": "Splash Scale",
+      "type": "slider",
+      "help": "Global splash/ripple scale multiplier. Default: 1.0.",
+      "valueOptions": {
+        "min": 0.1,
+        "max": 5.0,
+        "step": 0.1,
+        "sourceType": "ModSettingFloat"
+      }
+    },
+    {
+      "id": "bEnableWakeRipples:Water",
+      "text": "Enable Wake Ripples",
+      "type": "switcher",
+      "help": "Continuous ripples while hand moves underwater.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "Activators",
+      "type": "section"
+    },
+    {
+      "id": "bEnableInteractiveActivators:Activators",
+      "text": "Enable Touch Activation",
+      "type": "switcher",
+      "help": "Enable touch-based button and switch activation.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bEnableActivatorDiscoveryMode:Activators",
+      "text": "Enable Activator Discovery Mode",
+      "type": "switcher",
+      "help": "Hold right thumbstick near an activator to set its activation point. For modders and advanced users.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "type": "spacer"
+    },
+    {
+      "text": "HUD & UI",
+      "type": "section"
+    },
+    {
+      "id": "bHideWandHUD:Pipboy",
+      "text": "Hide Actions on Wand",
+      "type": "switcher",
+      "help": "Hides action prompts like [A] Take and [B] Transfer when pointing with wands. Item names still show.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bHideAllWandHUD:Pipboy",
+      "text": "Hide All Wand HUD Messages",
+      "type": "switcher",
+      "help": "Hides Actions and item display messages when pointing with wands.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bShowHolsterMessages:ObjectPickup",
+      "text": "Show Holster Messages",
+      "type": "switcher",
+      "help": "Show HUD message when holstering or equipping weapons.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bShowUnequipMessages:ObjectPickup",
+      "text": "Show Unequip Messages",
+      "type": "switcher",
+      "help": "Show HUD message when unequipping weapons via storage zone.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bShowStorageMessages:ItemStorage",
+      "text": "Show Storage Messages",
+      "type": "switcher",
+      "help": "Show HUD message when storing items.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    },
+    {
+      "id": "bShowConsumeMessages:Consumables",
+      "text": "Show Consume Messages",
+      "type": "switcher",
+      "help": "Show HUD message when consuming items.",
+      "valueOptions": {
+        "sourceType": "ModSettingBool"
+      }
+    }
+  ]
+}
