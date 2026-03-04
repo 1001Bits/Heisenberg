@@ -257,8 +257,8 @@ namespace HeisenbergPluginAPI {
         /** Spawn an item from inventory to hand. Returns true on success. */
         virtual bool DropToHand(RE::TESForm* form, bool isLeft) = 0;
 
-        /** Trigger smart grab (context-aware item retrieval). Returns true if item retrieved. */
-        virtual bool SmartGrab(bool isLeft) = 0;
+        /** Check if hand is near an interactive activator (button, switch, door, terminal). */
+        virtual bool IsInActivationZone(bool isLeft) = 0;
 
         // =================================================================
         // TRANSFORM CONTROL

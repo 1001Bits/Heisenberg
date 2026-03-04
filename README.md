@@ -106,7 +106,12 @@ api->DisableHand(true);                                   // disable left hand g
 | Method | Returns | Description |
 |--------|---------|-------------|
 | `DropToHand(form, isLeft)` | `bool` | Spawn inventory item to hand |
-| `SmartGrab(isLeft)` | `bool` | Context-aware item retrieval |
+
+#### Activator Proximity
+
+| Method | Returns | Description |
+|--------|---------|-------------|
+| `IsInActivationZone(isLeft)` | `bool` | Hand near an interactive activator (button, switch, door, terminal) |
 
 #### Transform
 
