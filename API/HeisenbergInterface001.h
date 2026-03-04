@@ -247,8 +247,8 @@ namespace HeisenbergPluginAPI {
         /** Get current zone name ("HEAD","CHEST","LEFT_HIP",etc.) or empty string. */
         virtual const char* GetCurrentZoneName(bool isLeft) = 0;
 
-        /** Get VH zone index. 0=None,1=LShoulder,2=RShoulder,3=LHip,4=RHip,5=LowerBack,6=LChest,7=RChest */
-        virtual int GetVHZoneIndex(bool isLeft) = 0;
+        /** Reserved. */
+        virtual int _reserved_GetVHZoneIndex(bool isLeft) = 0;
 
         // =================================================================
         // INVENTORY INTEGRATION
